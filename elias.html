@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="text"></h1>
+</body>
+<script>
+    let alternate = () => {
+        const text = document.getElementById("text")
+        const date = new Date()
+        const seconds = date.getMilliseconds()
+        if (seconds % 2 === 0) {
+            text.textContent = "motorsåg"
+        } else {
+            text.textContent = ""
+        }
+    }
+    setInterval(alternate, 100)
+</script>
+
+</html>
